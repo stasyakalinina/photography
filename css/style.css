@@ -127,8 +127,8 @@ input[type="radio"].visually-hidden {
 }
 
 .header__promo {
-  padding: 160px 0;
-}
+  padding: 140px 0 100px;
+} 
 
 .header__promo-title {
   margin: 0;
@@ -183,6 +183,10 @@ input[type="radio"].visually-hidden {
   margin-right: 25px;
 }
 
+.social__link{
+  cursor: pointer;
+}
+
 .social__item:last-child {
   margin-right: 0;
 }
@@ -202,7 +206,7 @@ input[type="radio"].visually-hidden {
 
 .arrow {
   position: relative;
-  top: -62px;
+  top: -50px;
 
   text-align: center;
 }
@@ -217,12 +221,21 @@ input[type="radio"].visually-hidden {
 }
 
 .about {
+  padding-top: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
   color: #2b2d5c;
 
   background-color: #ffffff;
 }
 
-.title {
+.about__img {
+  width: 515px;
+  height: auto;
+
+  background-image: url(../img/texture-photo-about.png);
 }
-.title.about__title{
-}
+
+
