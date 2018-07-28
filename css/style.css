@@ -214,17 +214,21 @@ input[type="radio"].visually-hidden {
 
 .arrow {
   position: relative;
-  top: -50px;
+  display: block;
 
   text-align: center;
 }
 
-.arrow:hover path,
-.arrow:focus path {
+.arrow-down{
+  top: -50px;
+}
+
+.arrow-down:hover path,
+.arrow-down:focus path {
   fill: #f2c200;
 }
 
-.arrow:active path {
+.arrow-down:active path {
   fill: rgba(255, 255, 255, 0.5);
 }
 
@@ -580,10 +584,13 @@ input[type="radio"].visually-hidden {
 }
 
 .message .container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .message__title {
+  align-self: center;
   margin-bottom: 50px;
 
   color: #ffffff;
@@ -677,6 +684,37 @@ input[type="radio"].visually-hidden {
 
 .message__btn:active {
   background-color: rgba(242, 194, 0, 0.5);
+}
+
+.arrow-up {
+  bottom: -74px;
+
+  padding: 12px 12px 7px;
+  display: block;
+  box-sizing: border-box;
+  align-self: flex-end;
+
+  background-color: rgba(182, 182, 199, 0.2);
+
+  cursor: pointer;
+}
+
+.arrow-up:hover,
+.arrow-up:focus {
+  background-color: rgba(182, 182, 199, 1);
+}
+
+svg.fa-angle-double-up {
+  width: 20px;
+  height: 20px;
+}
+
+svg.fa-angle-double-up path{
+  fill: #2b2d5c;
+}
+
+svg.fa-angle-double-up:active path {
+  fill: #f2c200;
 }
 
 .widgets {
