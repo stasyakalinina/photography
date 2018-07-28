@@ -217,10 +217,19 @@ input[type="radio"].visually-hidden {
   display: block;
 
   text-align: center;
+
+  border: none;
 }
 
-.arrow-down{
+.arrow-down {
   top: -50px;
+  left: 50%;
+
+  background-color: transparent;
+}
+
+.arrow-down path{
+  fill: #ffffff;
 }
 
 .arrow-down:hover path,
