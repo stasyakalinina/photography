@@ -5,7 +5,7 @@ var timer;
 var form = document.querySelector('.message__form');
 var	elements = form.querySelectorAll('.message__field');
 var btn = form.querySelector('.message__btn');
-var patternName = /^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$/;
+var patternName = '/^([а-яё\s]+|[a-z\s]+)$/iu';
 var patternMail	= /^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z])+$/;
 var	patternSpam	= /[^\<\>\[\]%\&'`]+$/;
 var errorMess = [
