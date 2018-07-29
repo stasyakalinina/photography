@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600|Trirong:200" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header" id="home">
+    <header class="main-header" id="navhome">
       <div class="container">
           <nav class="main-nav">
             <a class="logo">
@@ -19,16 +19,16 @@
                 <a class="main-nav__item-link">Home</a>
               </li>
               <li class="main-nav__item">
-                <a href="#about" class="main-nav__item-link">About</a>
+                <a href="#navabout" class="main-nav__item-link">About</a>
               </li>
               <li class="main-nav__item">
-                <a href="#clients" class="main-nav__item-link">Clients</a>
+                <a href="#navclients" class="main-nav__item-link">Clients</a>
               </li>
               <li class="main-nav__item">
-                <a href="#portfolio" class="main-nav__item-link">Portfolio</a>
+                <a href="#navportfolio" class="main-nav__item-link">Portfolio</a>
               </li>
               <li class="main-nav__item">
-                <a href="#blog" class="main-nav__item-link">Blog</a>
+                <a href="#navblog" class="main-nav__item-link">Blog</a>
               </li>
             </ul>
           </nav>
@@ -64,13 +64,13 @@
             </a>
           </li>
         </ul>
-      <button class="arrow arrow-down">
+      <a href="#navabout" class="arrow arrow-down">
           <span class="visually-hidden">Arrow-down</span>
           <svg aria-hidden="true" data-prefix="fas" data-icon="angle-double-down" class="svg-inline--fa fa-angle-double-down fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="20"><path fill="currentColor" d="M143 256.3L7 120.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0L313 86.3c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.4 9.5-24.6 9.5-34 .1zm34 192l136-136c9.4-9.4 9.4-24.6 0-33.9l-22.6-22.6c-9.4-9.4-24.6-9.4-33.9 0L160 352.1l-96.4-96.4c-9.4-9.4-24.6-9.4-33.9 0L7 278.3c-9.4 9.4-9.4 24.6 0 33.9l136 136c9.4 9.5 24.6 9.5 34 .1z"></path></svg>
-      </button>
+      </a>
     </header>
     <main>
-      <section class="about" id="about">
+      <section class="about" id="navabout" name="navabout">
         <div class="about__img"></div>
         <div class="about__content">
           <h2 class="title about__title">About MySelf</h2>
@@ -93,7 +93,7 @@
           <a href="#" class="btn about__btn" title="View My Flickr Profile">View My Flickr Profile</a>
         </div>
       </section>
-      <section class="clients" id="clients">
+      <section class="clients" id="navclients" name="navclients">
         <div class="container">
         <h2 class="title clients__title">Happy Clients</h2>
           <ul class="clients__list">
@@ -118,7 +118,7 @@
           </ul>
         </div>
       </section>
-      <section class="portfolio" id="portfolio">
+      <section class="portfolio" id="navportfolio" name="navportfolio">
         <div class="portfolio__text">
           <h2 class="title">Portfolio</h2>
           <p>The point of using Lorem Ipsum is that it has a non  more-or-less  dik sonormal distri bution of letters, as cliper opposed. a closer look to our fully furnished and beautiful demos, which can be use easily On this find website you can find some pictures I've taken during my travel. a clo look to our fully furnished and so beautful demos, which can be use.</p>
@@ -151,7 +151,7 @@
           </li>
         </ul>
       </section>
-      <section class="blog" id="blog">
+      <section class="blog" id="navblog" name="navblog">
         <div class="container">
           <div class="blog__item blog__item--1">
             <img src="img/blog-1.jpg" alt="desigh" class="blog__item-img">
@@ -186,20 +186,22 @@
           </div>
         </div>
       </section>
-      <section class="message" id="message">
+      <section class="message">
         <div class="container">
           <h2 class="title message__title">Let's work?</h2>
-          <form action="" class="message__form">
+          <form action="https://echo.htmlacademy.ru" class="message__form" name="message__form" method="post">
             <p class="message__form-item">
-              <input type="text" class="message__field" id="name-field" placeholder="*Your Name">
+              <input type="text" class="message__field" name="username" id="name-field"  maxlength="30" value="" placeholder="*Your Name">
+              <span class="error">error</span>
             </p>
             <p class="message__form-item">
-              <input type="text" class="message__field" id="email-field" placeholder="*Your Email">
+              <input type="text" class="message__field" id="email-field" name="usermail" maxlength="50" value="" placeholder="*Your Email">
+              <span class="error">error</span>
             </p>
             <p class="message__form-item">
-              <textarea name="email-field" id="mes-field" cols="5" rows="3" class="message__field" placeholder="Your Messages"></textarea>
+              <textarea name="textmessage" id="mes-field" cols="5" rows="3" class="message__field" placeholder="Your Messages"></textarea>
             </p>
-            <button class="btn message__btn">Send Message</button>
+            <button class="btn message__btn" type="submit">Send Message</button>
           </form>
           <button class="arrow arrow-up" id="top">
             <span class="visually-hidden">Arrow-up</span>
@@ -274,19 +276,19 @@
               <h3 class="widgets__item-title">Quick Link</h3>
               <ul class="widgets__item-nav">
                 <li>
-                  <a href="#home" title="Home">Home</a>
+                  <a href="#navhome" title="Home">Home</a>
                 </li>
                 <li>
-                  <a href="#about" title="About">About</a>
+                  <a href="#navabout" title="About">About</a>
                 </li>
                 <li>
-                  <a href="#clients" title="Clients">Clients</a>
+                  <a href="#navclients" title="Clients">Clients</a>
                 </li>
                 <li>
-                  <a href="#portfolio" title="Portfolio">Portfolio</a>
+                  <a href="#navportfolio" title="Portfolio">Portfolio</a>
                 </li>
                 <li>
-                  <a href="#blog" title="Blog">Blog</a>
+                  <a href="#navblog" title="Blog">Blog</a>
                 </li>
               </ul>
             </li>
@@ -303,6 +305,12 @@
         <p class="main-footer__copyrights">All Rights @ 2017 By Nazmul Hasan Jingar</p>
       </div>
     </footer>
+    <section class="modal-message modal-show">
+      <h2 class="title modal-message__title">Сообщение об отправке</h2>
+      <p>Ваши данные успешно отправлены!</p>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
