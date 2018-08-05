@@ -39,13 +39,6 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-/*
-.page-container {
-  max-width: 1600px;
-  margin: 0 auto;
-}
-*/
-
 .container {
   max-width: 1170px;
   min-width: 768px;
@@ -223,7 +216,6 @@ input[type="radio"].visually-hidden {
 
 .arrow-down {
   top: -50px;
-/*  left: 50%;*/
 
   background-color: transparent;
 }
