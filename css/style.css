@@ -43,6 +43,7 @@ input[type="radio"].visually-hidden {
   max-width: 1170px;
   min-width: 768px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .title {
@@ -130,6 +131,9 @@ input[type="radio"].visually-hidden {
 
 .header__promo {
   padding: 140px 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 } 
 
 .header__promo-title {
@@ -215,7 +219,7 @@ input[type="radio"].visually-hidden {
 }
 
 .arrow-down {
-  top: -50px;
+  top: -33px;
 
   background-color: transparent;
 }
@@ -286,10 +290,19 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 75px;
 
   list-style: none;
+}
+
+.examples-item {
+  margin-right: 15px;
+}
+
+.examples-item:last-child {
+  margin-right: 0;
 }
 
 .examples-item__title {
@@ -336,6 +349,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  align-content: flex-start;
   justify-content: space-between;
 
   list-style: none;
@@ -344,9 +358,9 @@ input[type="radio"].visually-hidden {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: flex-start;
   padding: 100px 0;
+  box-sizing: border-box;
 
   color: #595666;
 
@@ -355,7 +369,7 @@ input[type="radio"].visually-hidden {
 
 .portfolio__text {
   width: 30%;
-  margin-right: 50px;
+  margin-right: 4%;
   box-sizing: border-box;
   padding: 70px;
   padding-left: 78px;
@@ -374,6 +388,7 @@ input[type="radio"].visually-hidden {
 .portfolio__list {
   margin: 0;
   padding: 0;
+  width: 65%;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -456,6 +471,7 @@ input[type="radio"].visually-hidden {
 
 .blog .container {
   width: 100%;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
@@ -989,7 +1005,11 @@ svg.fa-angle-double-up:active path {
   }
   
   .portfolio__text {
-    padding: 35px;
+    padding: 40px;
+  }
+  
+  .portfolio__btn {
+    margin-left: 25px;
   }
 }
 
@@ -997,14 +1017,15 @@ svg.fa-angle-double-up:active path {
   .portfolio__text {
     width: 100%;
     margin-right: 0;
+    margin-bottom: 30px;
   }
   
   .portfolio__text h2 {
     text-align: center;
   }
   
-  .portfolio__btn {
-    margin-left: 25px;
+  .portfolio__list {
+    width: 100%;
   }
 }
 
@@ -1017,4 +1038,107 @@ svg.fa-angle-double-up:active path {
   .widgets__item:nth-last-child(2) {
     margin-top: 25px;
   }
+  
+  .clients__list {
+    justify-content: center;
+  }
+  
+  .clients__item {
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  
+  .clients__item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .about__img {
+    width: 25%;
+    margin-right: 30px;
+  }
+  
+  .arrow-down {
+    top: -10px;
+  }
+  
+  .main-nav {
+    
+  }
+  
+  .main-header .logo {
+    margin-right: 50px;
+  }
+  
+  .main-nav__menu {
+    justify-content: space-between;
+  }
+  
+  .main-header .social {
+    align-items: flex-start;
+    padding: 0 25px;
+    margin-bottom: 30px;
+  }
+  
+  .header__promo {
+    padding: 75px 0 50px;
+  }
+  
+  .header__promo-title {
+    width: 50%;
+  
+    font-size: 45px;
+    line-height: 50px;
+  }
+  
+  .header__promo-text {
+    width: 50%;
+    margin-bottom: 40px;
+  
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .blog__item--2 {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+  }
+  
+  .blog__item--1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+  
+  .blog__item--3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+  }
+  
+  .blog__item--4 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+  }
+  
+  .blog__text {
+    padding: 0 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about__img {
+    display: none;
+  }
+  
+  .about__content {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  
 }
