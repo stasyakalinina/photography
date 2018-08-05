@@ -760,6 +760,7 @@ svg.fa-angle-double-up:active path {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   list-style: none;
@@ -1004,5 +1005,16 @@ svg.fa-angle-double-up:active path {
   
   .portfolio__btn {
     margin-left: 25px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .widgets__item {
+    width: 48%;
+  }
+  
+  .widgets__item:last-child,
+  .widgets__item:nth-last-child(2) {
+    margin-top: 25px;
   }
 }
