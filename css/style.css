@@ -343,6 +343,7 @@ input[type="radio"].visually-hidden {
 
 .portfolio {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   padding: 100px 0;
@@ -978,4 +979,30 @@ svg.fa-angle-double-up:active path {
 
 .modal-close::after {
   transform: rotate(-45deg);
+}
+
+/*Media*/
+@media only screen and (max-width: 1220px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .portfolio__text {
+    padding: 35px;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .portfolio__text {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .portfolio__text h2 {
+    text-align: center;
+  }
+  
+  .portfolio__btn {
+    margin-left: 25px;
+  }
 }
