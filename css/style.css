@@ -298,11 +298,9 @@ input[type="radio"].visually-hidden {
 }
 
 .examples-item {
-  margin-right: 15px;
-}
-
-.examples-item:last-child {
-  margin-right: 0;
+  padding: 0 5px;
+  box-sizing: border-box;
+  width: 33%;
 }
 
 .examples-item__title {
@@ -1095,7 +1093,7 @@ svg.fa-angle-double-up:active path {
     margin-bottom: 40px;
   
     font-size: 18px;
-    line-height: 24px;
+    line-height: 22px;
   }
   
   .blog .container {
@@ -1165,14 +1163,152 @@ svg.fa-angle-double-up:active path {
   .blog__item img {
     width: 100%;
   }
-  
 }
 
 @media only screen and (max-width: 670px) {
-/*
   .main-nav__menu {
     display: none;
   }
-*/
+}
+
+@media only screen and (max-width: 550px) {
+  .message__form {
+    width: 100%
+  }
   
+  .title {
+    font-size: 30px;
+    line-height: 32px;
+  }
+  
+  .about,
+  .clients,
+  .portfolio,
+  .blog,
+  .message,
+  .widgets {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  
+  .examples {
+    margin-bottom: 45px; 
+  }
+  
+  .about__content {
+    padding: 0 30px 30px;
+  }
+  
+  .portfolio {
+    padding-bottom: 45px;
+  }
+  
+  .portfolio__item:last-child {
+    margin-top: 30px;
+  }
+  
+  .message__title {
+    margin-bottom: 25px;
+  }
+  
+  .message__btn {
+    margin-top: 0;
+  }
+  
+  .arrow-up {
+    bottom: -35px;
+  }
+}
+
+@media only screen and (max-width: 484px) {
+  .main-header {
+    background-position: center bottom, right top;
+    background-size: contain, cover;
+  }
+  
+  .header__promo {
+    align-items: center;
+  }
+  
+  .header__promo-title,
+  .header__promo-text {
+    width: 100%;
+  
+    text-align: center;
+  }
+  
+  .svg-inline--fa.fa-angle-double-down.fa-w-10 {
+    width: 16px;
+  }
+  
+  .header__promo {
+    padding-bottom: 40px;
+  }
+  
+  .main-header .social {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 444px) {
+  body,
+  .blog__text,
+  .examples-item__title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .title {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+  }
+  
+  .message__btn {
+    width: 58%;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  
+  .about__btn {
+    width: 100%;
+  
+    font-size: 14px;
+  }
+  
+  .about__content {
+    padding: 0;
+    padding-left: 15px;
+  }
+  
+  .about__text {
+    margin-bottom: 20px;
+  }
+  
+  .about__content h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .clients__list{
+    align-items: flex-start;
+  }
+  
+  .clients__item {
+    align-content: flex-end;
+    width: 46%;
+    margin: 15px 2% 0;
+  }
+  
+}
+
+@media only screen and (max-width: 350px) {
+  .clients__item {
+    width: 100%;
+  }
 }
