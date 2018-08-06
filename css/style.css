@@ -400,6 +400,11 @@ input[type="radio"].visually-hidden {
   margin-top: 50px;
 }
 
+.portfolio__item img {
+  width: 100%;
+  height: 100%;
+}
+
 .portfolio__item--1 {
   grid-column: 1 / 3;
   grid-row: 1 / 3;
@@ -1203,6 +1208,26 @@ svg.fa-angle-double-up:active path {
     padding-bottom: 45px;
   }
   
+  .portfolio__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+  
+  .portfolio__item--1, 
+  .portfolio__item--2,
+  .portfolio__item--4,
+  .portfolio__item--5,
+  .portfolio__item--6,
+  .portfolio__item--7 {
+    flex-grow: 1;
+  }
+  
+  .portfolio__item img{
+    width: 100%;
+    height: 100%;
+  }
+  
   .portfolio__item:last-child {
     margin-top: 30px;
   }
@@ -1272,10 +1297,10 @@ svg.fa-angle-double-up:active path {
     justify-content: center;
   }
   
-  .widgets__list {
-    
+  .portfolio__item--3 {
+    display: none;
   }
-  
+    
   .widgets__item {
     width: 100%;
     margin-bottom: 25px;
@@ -1301,6 +1326,7 @@ svg.fa-angle-double-up:active path {
   .posts-item__text {
     margin-left: 10px;
   }
+  
   .widgets__item-posts li {
     margin-bottom: 15px;
   }
