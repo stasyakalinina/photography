@@ -108,8 +108,9 @@ function cleanError(el) {
 //  });
 //});
 
-//  Закрытие попапа
+//  Закрытие попапа и сброс введенных в поля формы значений
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("modal-show");
+  form.reset();
 });
