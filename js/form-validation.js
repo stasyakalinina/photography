@@ -29,6 +29,7 @@ function validateForm(evt) {
       isError = true;
       showError(property, error);
     }
+    
   }
   
   if (!isError) {
@@ -43,7 +44,7 @@ function getFormData(form) {
   for (var i = 0; i < form.elements.length; i++) {
     var element = form.elements[i];    
   
-    if(element.tagName.toLowerCase() != 'button') {
+    if(element.tagName.toLowerCase() != "button" && element.tagName.toLowerCase() != "textarea") {
       controls[element.name] = element.value;
     }
   }
