@@ -34,6 +34,8 @@ function validateForm(evt) {
   if (!isError) {
     popup.classList.add("modal-show");
   }
+  
+  return false;
 }
 
 function getFormData(form) {
