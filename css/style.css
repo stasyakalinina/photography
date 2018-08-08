@@ -730,7 +730,7 @@ input[type="radio"].visually-hidden {
   background-color: #f85151;
 }
 
-.error:before {
+.error::before {
   content: "";
 
   position: absolute;
