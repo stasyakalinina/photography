@@ -267,6 +267,8 @@ input[type="radio"].visually-hidden {
 
 .arrow-down {
   top: -33px;
+  width: 22px;
+  margin: 0 auto;
 
   background-color: transparent;
 }
@@ -444,7 +446,7 @@ input[type="radio"].visually-hidden {
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
   -ms-grid-rows: (auto)[4];
-      grid-template-rows: repeat(4, auto-fill);
+      grid-template-rows: repeat(4, 1fr);
   grid-gap: 15px;
   align-items: stretch;
   justify-content: stretch;
@@ -457,9 +459,9 @@ input[type="radio"].visually-hidden {
 }
 
 .portfolio__item:last-child {
-  margin-top: 50px;
   padding-bottom: 19px;
   flex-basis: 100%;
+  align-self: end;
 }
 
 .portfolio__item img {
@@ -483,6 +485,8 @@ input[type="radio"].visually-hidden {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
+
+  line-height: 0;
 }
 
 .portfolio__item--3 {
@@ -501,6 +505,8 @@ input[type="radio"].visually-hidden {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
+
+  line-height: 0;
 }
 
 .portfolio__item--5 {
@@ -1153,6 +1159,10 @@ svg.fa-angle-double-up:active path {
 }
 
 @media only screen and (max-width: 1120px) {
+  .portfolio {
+    padding-bottom: 0;
+  }
+  
   .portfolio__text {
     width: 100%;
     margin-right: 0;
@@ -1165,6 +1175,11 @@ svg.fa-angle-double-up:active path {
 
   .portfolio__list {
     width: 100%;
+  }
+  
+  .portfolio__item:last-child {
+    padding-top: 35px;
+    align-self: center;
   }
 }
 
@@ -1414,7 +1429,7 @@ svg.fa-angle-double-up:active path {
   }
   
   .portfolio__item:last-child {
-    margin-top: 30px;
+  
   }
 
   .message__title {
