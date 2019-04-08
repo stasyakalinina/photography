@@ -9,6 +9,7 @@ body {
   color: #2b2d5c;
 
   background-color: #f2f2f2;
+
 }
 
 a {
@@ -43,6 +44,8 @@ input[type="radio"].visually-hidden {
   max-width: 1170px;
   margin: 0 auto;
   box-sizing: border-box;
+
+  scroll-behavior: smooth;
 }
 
 .title {
@@ -265,24 +268,26 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
-.arrow-down {
+.arrow--down {
   top: -33px;
   width: 22px;
   margin: 0 auto;
 
   background-color: transparent;
+
+  scroll-behavior: smooth;
 }
 
-.arrow-down path{
+.arrow--down path{
   fill: #ffffff;
 }
 
-.arrow-down:hover path,
-.arrow-down:focus path {
+.arrow--down:hover path,
+.arrow--down:focus path {
   fill: #f2c200;
 }
 
-.arrow-down:active path {
+.arrow--down:active path {
   fill: rgba(255, 255, 255, 0.5);
 }
 
@@ -875,7 +880,7 @@ input[type="radio"].visually-hidden {
   background-color: rgba(242, 194, 0, 0.5);
 }
 
-.arrow-up {
+.arrow--up {
   bottom: -74px;
 
   padding: 12px 12px 7px;
@@ -888,8 +893,8 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.arrow-up:hover,
-.arrow-up:focus {
+.arrow--up:hover,
+.arrow--up:focus {
   background-color: rgba(182, 182, 199, 1);
 }
 
@@ -1102,7 +1107,7 @@ svg.fa-angle-double-up:active path {
   display: block;
 }
 
-.modal-close {
+.modal-message__close {
   position: absolute;
   top: -10px;
   right: -40px;
@@ -1118,8 +1123,8 @@ svg.fa-angle-double-up:active path {
   cursor: pointer;
 }
 
-.modal-close::before,
-.modal-close::after {
+.modal-message__close::before,
+.modal-message__close::after {
   content: "";
 
   position: absolute;
@@ -1132,12 +1137,12 @@ svg.fa-angle-double-up:active path {
   background-color: #f2c200;
 }
 
-.modal-close::before {
+.modal-message__close::before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.modal-close::after {
+.modal-message__close::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -1162,7 +1167,7 @@ svg.fa-angle-double-up:active path {
   .portfolio {
     padding-bottom: 0;
   }
-  
+
   .portfolio__text {
     width: 100%;
     margin-right: 0;
@@ -1176,7 +1181,7 @@ svg.fa-angle-double-up:active path {
   .portfolio__list {
     width: 100%;
   }
-  
+
   .portfolio__item:last-child {
     padding-top: 35px;
     align-self: center;
@@ -1214,7 +1219,7 @@ svg.fa-angle-double-up:active path {
     margin-right: 30px;
   }
 
-  .arrow-down {
+  .arrow--down {
     top: -10px;
   }
 
@@ -1423,13 +1428,13 @@ svg.fa-angle-double-up:active path {
     width: 100%;
     height: 100%;
   }
-  
+
   .portfolio__item {
     flex-basis: 100%;
   }
-  
+
   .portfolio__item:last-child {
-  
+
   }
 
   .message__title {
@@ -1440,7 +1445,7 @@ svg.fa-angle-double-up:active path {
     margin-top: 0;
   }
 
-  .arrow-up {
+  .arrow--up {
     bottom: -35px;
   }
 

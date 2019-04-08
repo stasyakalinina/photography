@@ -22,28 +22,28 @@ function validateForm(evt) {
   evt.preventDefault();
   var formVal = getFormData(form);
   var error;
-  
+
   for (var property in formVal) {
     error = getError(formVal, property);
     if (error.length != 0) {
       isError = true;
       showError(property, error);
     }
-    
+
   }
-  
+
   if (!isError) {
     popup.classList.add("modal-show");
   }
-  
+
   return false;
 }
 
 function getFormData(form) {
   var controls = {};
   for (var i = 0; i < form.elements.length; i++) {
-    var element = form.elements[i];    
-  
+    var element = form.elements[i];
+
     if(element.tagName.toLowerCase() != "button" && element.tagName.toLowerCase() != "textarea") {
       controls[element.name] = element.value;
     }
@@ -53,7 +53,7 @@ function getFormData(form) {
 
 function getError(formVal, property) {
   var error = '';
-  
+
   var validate = {
     'username': function() {
       if (formVal.username.length == 0 || patternName.test(formVal.username) == false) {
@@ -62,20 +62,20 @@ function getError(formVal, property) {
     },
     'usermail': function() {
       if (formVal.usermail.length == 0) {
-        error = errorMess[2];  
+        error = errorMess[2];
       } else if (patternMail.test(formVal.usermail) == false) {
         error = errorMess[3];
       }
     }
   };
-  validate[property]();  
+  validate[property]();
   return error;
 }
 
 function showError(property, error) {
   var formElement = form.querySelector('[name=' + property + ']');
   var errorBox = formElement.nextElementSibling;
-  
+
   formElement.classList.add('message__field--error');
   errorBox.innerHTML = error;
   errorBox.style.display = 'block';
