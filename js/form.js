@@ -28,23 +28,22 @@
     addInvalidListener(item);
   });
 
-  function showSuccessMessage() {
-    popup.classList.add("modal-show");
-  };
-
   function closeSuccessMessage(evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
     form.reset();
   };
 
-  function sendForm(evt) {
-    if (form.checkValidity()) {
-      evt.preventDefault();
-      showSuccessMessage();
-    }
+  let showSuccessMessage = () => {
+    popup.classList.add("modal-show");
+    close.addEventListener("click", closeSuccessMessage);
   };
 
-  btn.addEventListener('click', sendForm);
-  close.addEventListener("click", closeSuccessMessage);
+  btn.addEventListener('click', (evt) => {
+    if (form.checkValidity()) {
+      evt.preventDefault();
+      let data = new FormData(form);
+      window.load.save(showSuccessMessage, data);
+    }
+  });
 })();

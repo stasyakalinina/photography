@@ -193,14 +193,12 @@
       <section class="message">
         <div class="container">
           <h2 class="title message__title">Let's work?</h2>
-          <form action="https://echo.htmlacademy.ru" class="message__form" name="message__form" method="post" id="messageForm">
+          <form action="https://echo.htmlacademy.ru" class="message__form" name="message__form" method="post" enctype="multipart/form-data" autocomplete="off">
             <p class="message__form-item">
               <input type="text" class="message__field" name="username" id="username" placeholder="*Your Name" required>
-              <!-- <span class="error">error</span> -->
             </p>
             <p class="message__form-item">
               <input type="email" class="message__field" id="usermail" name="usermail"  placeholder="*Your Email" required>
-              <!-- <span class="error">error</span> -->
             </p>
             <p class="message__form-item">
               <textarea name="usermessage" id="usermessage" cols="5" rows="3" class="message__field" placeholder="Your Messages"></textarea>
@@ -315,6 +313,15 @@
       <button class="modal-message__close" type="button">Закрыть</button>
     </section>
 
+    <template id="error">
+      <section class="modal-message">
+        <h2 class="title modal-message__title">Ошибка отправки</h2>
+        <p class="error__message"></p>
+        <button class="modal-message__close" type="button">Закрыть</button>
+      </section>
+    </template>
+
+    <script src="js/load.js"></script>
     <script src="js/form.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/menu.js"></script>
