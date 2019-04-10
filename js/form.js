@@ -34,7 +34,7 @@
     form.reset();
   };
 
-  let showSuccessMessage = () => {
+  function showSuccessMessage() {
     popup.classList.add("modal-show");
     close.addEventListener("click", closeSuccessMessage);
   };
